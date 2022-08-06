@@ -10,15 +10,14 @@ app = Flask(__name__)
 @app.route('/', defaults={'category': 'all'})
 @app.route('/<category>')
 def home(category):
-    match category:
-        case 'moon':
-            fileNames = images.MOON_FILES
-        case 'landscape':
-            fileNames = images.LANDSCAPE_FILES
-        case 'other':
-            fileNames = images.OTHER_FILES
-        case _:
-            fileNames = images.ALL
+    if category == 'moon':
+        fileNames = images.MOON_FILES
+    elif category == 'landscape':
+        fileNames = images.LANDSCAPE_FILES
+    elif category == 'other':
+        fileNames = images.OTHER_FILES
+    else:
+        fileNames = images.ALL
 
     random.shuffle(fileNames)
     return render_template('home.html',
