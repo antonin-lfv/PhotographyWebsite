@@ -31,7 +31,8 @@ def home(category):
 
 @app.route('/about')
 def about():
-    return render_template('about.html')
+    nb_photos = len(images.ALL)
+    return render_template('about.html', nb_photos=nb_photos)
 
 
 @app.route('/contact')
