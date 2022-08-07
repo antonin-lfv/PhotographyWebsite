@@ -27,7 +27,7 @@
 		<div class="container-fluid p-md-0 ">
 			<div class="row portfolios-area">
                 {% for looop in range(ceil(len(fileNames)/8)) %}
-                    {% if looop*8 <= len(fileNames) %}
+                    {% if looop*8 < len(fileNames) %}
                         <div class="mix col-lg-6 col-md-6 web">
                             <a class="portfolio-item set-bg" data-setbg="{{ url_for('static', filename=fileNames[looop*8]) }}">
                                 <div class="pi-inner">
@@ -36,7 +36,7 @@
                             </a>
                         </div>
                     {% endif %}
-                    {% if looop*8 + 1<= len(fileNames) %}
+                    {% if looop*8 + 1< len(fileNames) %}
                     <div class="mix col-lg-6 col-md-6 digital">
                         <a class="portfolio-item set-bg " data-setbg="{{ url_for('static', filename=fileNames[looop*8 + 1]) }}">
                             <div class="pi-inner">
@@ -45,7 +45,7 @@
                         </a>
                     </div>
                     {% endif %}
-                    {% if looop*8 + 2<= len(fileNames) %}
+                    {% if looop*8 + 2< len(fileNames) %}
                     <div class="mix col-lg-4 col-md-6 web">
                         <a class="portfolio-item set-bg" data-setbg="{{ url_for('static', filename=fileNames[looop*8 + 2]) }}">
                             <div class="pi-inner">
@@ -54,7 +54,7 @@
                         </a>
                     </div>
                     {% endif %}
-                    {% if looop*8 + 3<= len(fileNames) %}
+                    {% if looop*8 + 3< len(fileNames) %}
                     <div class="mix col-lg-4 col-md-6 digital">
                         <a class="portfolio-item set-bg" data-setbg="{{ url_for('static', filename=fileNames[looop*8 + 3]) }}">
                             <div class="pi-inner">
@@ -63,7 +63,7 @@
                         </a>
                     </div>
                     {% endif %}
-                    {% if looop*8 + 4<= len(fileNames) %}
+                    {% if looop*8 + 4< len(fileNames) %}
                     <div class="mix col-lg-4 col-md-6 rened">
                         <a class="portfolio-item set-bg" data-setbg="{{ url_for('static', filename=fileNames[looop*8 + 4]) }}">
                             <div class="pi-inner">
@@ -72,7 +72,7 @@
                         </a>
                     </div>
                     {% endif %}
-                    {% if looop*8 + 5<= len(fileNames) %}
+                    {% if looop*8 + 5< len(fileNames) %}
                     <div class="mix col-lg-12 col-md-6 brand">
                         <a class="portfolio-item set-bg" data-setbg="{{ url_for('static', filename=fileNames[looop*8 + 5]) }}">
                             <div class="pi-inner">
@@ -81,7 +81,7 @@
                         </a>
                     </div>
                     {% endif %}
-                    {% if looop*8 + 6<= len(fileNames) %}
+                    {% if looop*8 + 6< len(fileNames) %}
                     <div class="mix col-lg-6 col-md-6 rened">
                         <a class="portfolio-item set-bg" data-setbg="{{ url_for('static', filename=fileNames[looop*8 + 6]) }}">
                             <div class="pi-inner">
@@ -90,7 +90,7 @@
                         </a>
                     </div>
                     {% endif %}
-                    {% if looop*8 + 7<= len(fileNames) %}
+                    {% if looop*8 + 7< len(fileNames) %}
                     <div class="mix col-lg-6 col-md-6 brand">
                         <a class="portfolio-item set-bg" data-setbg="{{ url_for('static', filename=fileNames[looop*8 + 7]) }}">
                             <div class="pi-inner">
