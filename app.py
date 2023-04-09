@@ -12,6 +12,8 @@ app = Flask(__name__)
 def home(category):
     if category == 'moon':
         fileNames = images.MOON_FILES
+    elif category == 'sun':
+        fileNames = images.SUN_FILES
     elif category == 'landscape':
         fileNames = images.LANDSCAPE_FILES
     elif category == 'other':
