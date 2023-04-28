@@ -62,11 +62,11 @@
 <section class="portfolio-section">
     <div class="container">
         <ul class="portfolio-filter">
-            <li><a onclick="filterCategory('All')" style="color:#979797;">All</a></li>
-            <li><a onclick="filterCategory('Moon')" style="color:#979797;">Moon</a></li>
-            <li><a onclick="filterCategory('Sun')" style="color:#979797;">Sun</a></li>
-            <li><a onclick="filterCategory('Landscape')" style="color:#979797;">Landscape</a></li>
-            <li><a onclick="filterCategory('Other')" style="color:#979797;">Other</a></li>
+            <li><a onclick="displayImages('All')" style="color:#979797;">All</a></li>
+            <li><a onclick="displayImages('Moon')" style="color:#979797;">Moon</a></li>
+            <li><a onclick="displayImages('Sun')" style="color:#979797;">Sun</a></li>
+            <li><a onclick="displayImages('Landscape')" style="color:#979797;">Landscape</a></li>
+            <li><a onclick="displayImages('Other')" style="color:#979797;">Other</a></li>
         </ul>
     </div>
     <div class="container-fluid p-md-0 ">
@@ -98,26 +98,6 @@
 <script type="text/javascript" src="static/js/main.js"></script>
 
 <script>
-
-    function filterCategory(category) {
-        const portfolioItems = document.querySelectorAll('.mix');
-        const colSizes = ['col-lg-4', 'col-lg-4', 'col-lg-4', 'col-lg-6', 'col-lg-6'];
-        let colIndex = 0;
-
-        for (const item of portfolioItems) {
-            const itemCategory = item.classList[item.classList.length - 1];
-
-            if (category === 'All' || itemCategory === category.toLowerCase()) {
-                const colSize = colSizes[colIndex];
-                item.classList.remove(...colSizes);
-                item.classList.add(colSize);
-                item.style.display = 'block';
-                colIndex = (colIndex + 1) % colSizes.length;
-            } else {
-                item.style.display = 'none';
-            }
-        }
-    }
 
     // create img_path, img_description, img_description_color arrays
     const img_path = [
@@ -224,18 +204,21 @@
         }
     }
 
-    function displayImages() {
+    function displayImages(category = 'All') {
         const gallery = document.querySelector('.portfolios-area');
         const colSizes = ['col-lg-4', 'col-lg-4', 'col-lg-4', 'col-lg-6', 'col-lg-6'];
         let colIndex = 0;
 
+        gallery.innerHTML = '';
+
         shuffleArray(img_path, img_description, img_description_color, img_category);
 
         for (let i = 0; i < img_path.length; i++) {
-            const colSize = colSizes[colIndex];
-            colIndex = (colIndex + 1) % colSizes.length;
+            if (category === 'All' || img_category[i] === category.toLowerCase()) {
+                const colSize = colSizes[colIndex];
+                colIndex = (colIndex + 1) % colSizes.length;
 
-            const portfolioItem = `
+                const portfolioItem = `
       <div class="mix ${colSize} col-md-6 web ${img_category[i]}">
         <a class="portfolio-item set-bg" style="background-image: url(${img_path[i]});">
           <div class="pi-inner">
@@ -245,11 +228,12 @@
       </div>
     `;
 
-            gallery.insertAdjacentHTML('beforeend', portfolioItem);
+                gallery.insertAdjacentHTML('beforeend', portfolioItem);
+            }
         }
     }
 
-    document.addEventListener('DOMContentLoaded', displayImages);
+    document.addEventListener('DOMContentLoaded', () => displayImages('All'));
 
 
 </script>
