@@ -62,200 +62,15 @@
 <section class="portfolio-section">
     <div class="container">
         <ul class="portfolio-filter">
-            <li><a onclick="showall()" style="color:#979797;">All</a></li>
-            <li><a onclick="only_display_moon()" style="color:#979797;">Moon</a></li>
-            <li><a onclick="only_display_sun()" style="color:#979797;">Sun</a></li>
-            <li><a onclick="only_display_land()" style="color:#979797;">Landscape</a></li>
-            <li><a onclick="only_display_other()" style="color:#979797;">Other</a></li>
+            <li><a onclick="filterCategory('All')" style="color:#979797;">All</a></li>
+            <li><a onclick="filterCategory('Moon')" style="color:#979797;">Moon</a></li>
+            <li><a onclick="filterCategory('Sun')" style="color:#979797;">Sun</a></li>
+            <li><a onclick="filterCategory('Landscape')" style="color:#979797;">Landscape</a></li>
+            <li><a onclick="filterCategory('Other')" style="color:#979797;">Other</a></li>
         </ul>
     </div>
     <div class="container-fluid p-md-0 ">
         <div class="row portfolios-area">
-            <!-- Par block de 8 div -->
-            <div class="mix col-lg-6 col-md-6 web landscape">
-                <a class="portfolio-item set-bg"
-                   data-setbg="static/img/img/landscape/landscape1_5-08-2018.JPG">
-                    <div class="pi-inner">
-                        <h2>Sunday 05 August 2018</h2>
-                    </div>
-                </a>
-            </div>
-
-            <div class="mix col-lg-6 col-md-6 digital landscape">
-                <a class="portfolio-item set-bg "
-                   data-setbg="static/img/img/landscape/landscape1_13-07-2021.jpeg">
-                    <div class="pi-inner">
-                        <h2>Tuesday 13 July 2021</h2>
-                    </div>
-                </a>
-            </div>
-
-            <div class="mix col-lg-4 col-md-6 web landscape">
-                <a class="portfolio-item set-bg"
-                   data-setbg="static/img/img/landscape/landscape1_15-08-2017.JPG">
-                    <div class="pi-inner">
-                        <h2>Tuesday 15 August 2017</h2>
-                    </div>
-                </a>
-            </div>
-
-            <div class="mix col-lg-4 col-md-6 digital landscape">
-                <a class="portfolio-item set-bg"
-                   data-setbg="static/img/img/landscape/landscape1_15-08-2021.jpeg">
-                    <div class="pi-inner">
-                        <h2>Sunday 15 August 2021</h2>
-                    </div>
-                </a>
-            </div>
-
-            <div class="mix col-lg-4 col-md-6 rened landscape">
-                <a class="portfolio-item set-bg"
-                   data-setbg="static/img/img/landscape/landscape1_20-08-2018.JPG">
-                    <div class="pi-inner">
-                        <h2>Monday 20 August 2018</h2>
-                    </div>
-                </a>
-            </div>
-
-            <div class="mix col-lg-12 col-md-6 brand landscape">
-                <a class="portfolio-item set-bg"
-                   data-setbg="static/img/img/landscape/landscape1_21-08-2021.jpeg">
-                    <div class="pi-inner">
-                        <h2>Saturday 21 August 2021</h2>
-                    </div>
-                </a>
-            </div>
-
-            <div class="mix col-lg-6 col-md-6 rened landscape">
-                <a class="portfolio-item set-bg"
-                   data-setbg="static/img/img/landscape/landscape1_22-08-2019.jpeg">
-                    <div class="pi-inner">
-                        <h2>Thursday 22 august 2019</h2>
-                    </div>
-                </a>
-            </div>
-
-            <div class="mix col-lg-6 col-md-6 brand landscape">
-                <a class="portfolio-item set-bg"
-                   data-setbg="static/img/img/landscape/landscape1_25-08-2020.jpeg">
-                    <div class="pi-inner">
-                        <h2>Tuesday 25 August 2020</h2>
-                    </div>
-                </a>
-            </div>
-
-            <!--  -->
-
-            <div class="mix col-lg-6 col-md-6 web moon">
-                <a class="portfolio-item set-bg"
-                   data-setbg="static/img/img/moon/moon1_1-07-2022.png">
-                    <div class="pi-inner">
-                        <h2>Friday 01 July 2022</h2>
-                    </div>
-                </a>
-            </div>
-
-            <div class="mix col-lg-6 col-md-6 digital moon">
-                <a class="portfolio-item set-bg "
-                   data-setbg="static/img/img/moon/moon1_3-08-2022.png">
-                    <div class="pi-inner">
-                        <h2>Wednesday 03 August 2022</h2>
-                    </div>
-                </a>
-            </div>
-
-            <div class="mix col-lg-4 col-md-6 web moon">
-                <a class="portfolio-item set-bg"
-                   data-setbg="static/img/img/moon/moon1_7-06-2022.jpg">
-                    <div class="pi-inner">
-                        <h2>Tuesday 07 June 2022</h2>
-                    </div>
-                </a>
-            </div>
-
-            <div class="mix col-lg-4 col-md-6 digital moon">
-                <a class="portfolio-item set-bg"
-                   data-setbg="static/img/img/moon/moon1_8-07-2022.png">
-                    <div class="pi-inner">
-                        <h2>Friday 08 July 2022</h2>
-                    </div>
-                </a>
-            </div>
-
-            <div class="mix col-lg-4 col-md-6 rened moon">
-                <a class="portfolio-item set-bg"
-                   data-setbg="static/img/img/moon/moon1_13-05-2022.jpg">
-                    <div class="pi-inner">
-                        <h2>Friday 13 May 2022</h2>
-                    </div>
-                </a>
-            </div>
-
-            <div class="mix col-lg-12 col-md-6 brand moon">
-                <a class="portfolio-item set-bg"
-                   data-setbg="static/img/img/moon/moon1_15-04-2022.png">
-                    <div class="pi-inner">
-                        <h2>Friday 15 April 2022</h2>
-                    </div>
-                </a>
-            </div>
-
-            <div class="mix col-lg-6 col-md-6 rened moon">
-                <a class="portfolio-item set-bg"
-                   data-setbg="static/img/img/moon/moon2_3-08-2022.png">
-                    <div class="pi-inner">
-                        <h2>Wednesday 03 August 2022</h2>
-                    </div>
-                </a>
-            </div>
-
-            <div class="mix col-lg-6 col-md-6 brand other">
-                <a class="portfolio-item set-bg"
-                   data-setbg="static/img/img/other/setup1_16-04-2022.png">
-                    <div class="pi-inner">
-                        <h2>Saturday 16 April 2022</h2>
-                    </div>
-                </a>
-            </div>
-
-            <!--  -->
-
-            <div class="mix col-lg-6 col-md-6 web sun">
-                <a class="portfolio-item set-bg"
-                   data-setbg="static/img/img/sun/sun1_08-04-2023.png">
-                    <div class="pi-inner">
-                        <h2>Saturday 08 April 2023</h2>
-                    </div>
-                </a>
-            </div>
-
-            <div class="mix col-lg-6 col-md-6 digital sun">
-                <a class="portfolio-item set-bg "
-                   data-setbg="static/img/img/sun/sun1_09-04-2023.png">
-                    <div class="pi-inner">
-                        <h2>Sunday 09 April 2023</h2>
-                    </div>
-                </a>
-            </div>
-
-            <div class="mix col-lg-4 col-md-6 web sun">
-                <a class="portfolio-item set-bg"
-                   data-setbg="static/img/img/sun/sun2_08-04-2023.png">
-                    <div class="pi-inner">
-                        <h2>Saturday 08 April 2023</h2>
-                    </div>
-                </a>
-            </div>
-
-            <div class="mix col-lg-4 col-md-6 digital sun">
-                <a class="portfolio-item set-bg"
-                   data-setbg="static/img/img/sun/sun2_09-04-2023.png">
-                    <div class="pi-inner">
-                        <h2 style="color: black!important;">Sunday 09 April 2023</h2>
-                    </div>
-                </a>
-            </div>
-
         </div>
     </div>
 </section>
@@ -283,91 +98,159 @@
 <script type="text/javascript" src="static/js/main.js"></script>
 
 <script>
-    // get div with class landscape, moon, sun, other
-    const landscape = document.getElementsByClassName("landscape");
-    const moon = document.getElementsByClassName("moon");
-    const sun = document.getElementsByClassName("sun");
-    const other = document.getElementsByClassName("other");
 
-    function showall() {
-        // show all div
-        for (let i = 0; i < landscape.length; i++) {
-            landscape[i].style.display = "block";
-        }
-        for (let i = 0; i < moon.length; i++) {
-            moon[i].style.display = "block";
-        }
-        for (let i = 0; i < sun.length; i++) {
-            sun[i].style.display = "block";
-        }
-        for (let i = 0; i < other.length; i++) {
-            other[i].style.display = "block";
+    function filterCategory(category) {
+        const portfolioItems = document.querySelectorAll('.mix');
+        const colSizes = ['col-lg-4', 'col-lg-4', 'col-lg-4', 'col-lg-6', 'col-lg-6'];
+        let colIndex = 0;
+
+        for (const item of portfolioItems) {
+            const itemCategory = item.classList[item.classList.length - 1];
+
+            if (category === 'All' || itemCategory === category.toLowerCase()) {
+                const colSize = colSizes[colIndex];
+                item.classList.remove(...colSizes);
+                item.classList.add(colSize);
+                item.style.display = 'block';
+                colIndex = (colIndex + 1) % colSizes.length;
+            } else {
+                item.style.display = 'none';
+            }
         }
     }
 
-    function only_display_land() {
-        // hide all div
-        for (let i = 0; i < landscape.length; i++) {
-            landscape[i].style.display = "block";
-        }
-        for (let i = 0; i < moon.length; i++) {
-            moon[i].style.display = "none";
-        }
-        for (let i = 0; i < sun.length; i++) {
-            sun[i].style.display = "none";
-        }
-        for (let i = 0; i < other.length; i++) {
-            other[i].style.display = "none";
+    // create img_path, img_description, img_description_color arrays
+    const img_path = [
+        "static/img/img/landscape/landscape1_5-08-2018.JPG",
+        "static/img/img/landscape/landscape1_13-07-2021.jpeg",
+        "static/img/img/landscape/landscape1_15-08-2017.JPG",
+        "static/img/img/landscape/landscape1_15-08-2021.jpeg",
+        "static/img/img/landscape/landscape1_20-08-2018.JPG",
+        "static/img/img/landscape/landscape1_21-08-2021.jpeg",
+        "static/img/img/moon/moon1_15-04-2022.png",
+        "static/img/img/landscape/landscape1_22-08-2019.jpeg",
+        "static/img/img/landscape/landscape1_25-08-2020.jpeg",
+        "static/img/img/moon/moon1_1-07-2022.png",
+        "static/img/img/moon/moon1_3-08-2022.png",
+        "static/img/img/moon/moon1_7-06-2022.jpg",
+        "static/img/img/moon/moon1_8-07-2022.png",
+        "static/img/img/moon/moon1_13-05-2022.jpg",
+        "static/img/img/moon/moon2_3-08-2022.png",
+        "static/img/img/other/setup1_16-04-2022.png",
+        "static/img/img/sun/sun1_08-04-2023.png",
+        "static/img/img/sun/sun1_09-04-2023.png",
+        "static/img/img/sun/sun2_08-04-2023.png",
+        "static/img/img/sun/sun2_09-04-2023.png",
+    ];
+
+    const img_description = [
+        "Sunday 05 August 2018",
+        "Tuesday 13 July 2021",
+        "Tuesday 15 August 2017",
+        "Sunday 15 August 2021",
+        "Monday 20 August 2018",
+        "Saturday 21 August 2021",
+        "Friday 15 April 2022",
+        "Thursday 22 august 2019",
+        "Tuesday 25 August 2020",
+        "Friday 01 July 2022",
+        "Wednesday 03 August 2022",
+        "Tuesday 07 June 2022",
+        "Friday 08 July 2022",
+        "Friday 13 May 2022",
+        "Wednesday 03 August 2022",
+        "Saturday 16 April 2022",
+        "Saturday 08 April 2023",
+        "Sunday 09 April 2023",
+        "Saturday 08 April 2023",
+        "Sunday 09 April 2023",
+    ];
+
+    const img_description_color = [
+        "white",
+        "white",
+        "white",
+        "white",
+        "white",
+        "white",
+        "white",
+        "white",
+        "white",
+        "white",
+        "white",
+        "white",
+        "white",
+        "white",
+        "white",
+        "white",
+        "white",
+        "white",
+        "white",
+        "black",
+    ];
+
+    const img_category = [
+        "landscape",
+        "landscape",
+        "landscape",
+        "landscape",
+        "landscape",
+        "landscape",
+        "moon",
+        "landscape",
+        "landscape",
+        "moon",
+        "moon",
+        "moon",
+        "moon",
+        "moon",
+        "moon",
+        "other",
+        "sun",
+        "sun",
+        "sun",
+        "sun"
+    ];
+
+
+    function shuffleArray(array, ...otherArrays) {
+        for (let i = array.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [array[i], array[j]] = [array[j], array[i]];
+
+            for (const otherArray of otherArrays) {
+                [otherArray[i], otherArray[j]] = [otherArray[j], otherArray[i]];
+            }
         }
     }
 
-    function only_display_moon() {
-        // hide all div
-        for (let i = 0; i < landscape.length; i++) {
-            landscape[i].style.display = "none";
-        }
-        for (let i = 0; i < moon.length; i++) {
-            moon[i].style.display = "block";
-        }
-        for (let i = 0; i < sun.length; i++) {
-            sun[i].style.display = "none";
-        }
-        for (let i = 0; i < other.length; i++) {
-            other[i].style.display = "none";
+    function displayImages() {
+        const gallery = document.querySelector('.portfolios-area');
+        const colSizes = ['col-lg-4', 'col-lg-4', 'col-lg-4', 'col-lg-6', 'col-lg-6'];
+        let colIndex = 0;
+
+        shuffleArray(img_path, img_description, img_description_color, img_category);
+
+        for (let i = 0; i < img_path.length; i++) {
+            const colSize = colSizes[colIndex];
+            colIndex = (colIndex + 1) % colSizes.length;
+
+            const portfolioItem = `
+      <div class="mix ${colSize} col-md-6 web ${img_category[i]}">
+        <a class="portfolio-item set-bg" style="background-image: url(${img_path[i]});">
+          <div class="pi-inner">
+            <h2${img_description_color[i] ? ` style="color: ${img_description_color[i]}!important;"` : ''}>${img_description[i]}</h2>
+          </div>
+        </a>
+      </div>
+    `;
+
+            gallery.insertAdjacentHTML('beforeend', portfolioItem);
         }
     }
 
-    function only_display_sun() {
-        // hide all div
-        for (let i = 0; i < landscape.length; i++) {
-            landscape[i].style.display = "none";
-        }
-        for (let i = 0; i < moon.length; i++) {
-            moon[i].style.display = "none";
-        }
-        for (let i = 0; i < sun.length; i++) {
-            sun[i].style.display = "block";
-        }
-        for (let i = 0; i < other.length; i++) {
-            other[i].style.display = "none";
-        }
-    }
+    document.addEventListener('DOMContentLoaded', displayImages);
 
-    function only_display_other() {
-        // hide all div
-        for (let i = 0; i < landscape.length; i++) {
-            landscape[i].style.display = "none";
-        }
-        for (let i = 0; i < moon.length; i++) {
-            moon[i].style.display = "none";
-        }
-        for (let i = 0; i < sun.length; i++) {
-            sun[i].style.display = "none";
-        }
-        for (let i = 0; i < other.length; i++) {
-            other[i].style.display = "block";
-        }
-    }
 
 </script>
 
