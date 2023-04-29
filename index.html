@@ -13,6 +13,11 @@
     <link rel="stylesheet" type="text/css" href="static/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="static/css/magnific-popup.css">
     <link rel="stylesheet" type="text/css" href="static/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
 
 </head>
 
@@ -99,7 +104,7 @@
 
 <script>
 
-    // create img_path, img_description, img_description_color arrays
+    // create img_path, img_description, img_description_color, img_category arrays
     const img_path = [
         "static/img/img/landscape/landscape1_5-08-2018.JPG",
         "static/img/img/landscape/landscape1_13-07-2021.jpeg",
@@ -110,17 +115,24 @@
         "static/img/img/moon/moon1_15-04-2022.png",
         "static/img/img/landscape/landscape1_22-08-2019.jpeg",
         "static/img/img/landscape/landscape1_25-08-2020.jpeg",
-        "static/img/img/moon/moon1_1-07-2022.png",
         "static/img/img/moon/moon1_3-08-2022.png",
         "static/img/img/moon/moon1_7-06-2022.jpg",
         "static/img/img/moon/moon1_8-07-2022.png",
         "static/img/img/moon/moon1_13-05-2022.jpg",
-        "static/img/img/moon/moon2_3-08-2022.png",
         "static/img/img/other/setup1_16-04-2022.png",
         "static/img/img/sun/sun1_08-04-2023.png",
         "static/img/img/sun/sun1_09-04-2023.png",
         "static/img/img/sun/sun2_08-04-2023.png",
         "static/img/img/sun/sun2_09-04-2023.png",
+        "static/img/img/moon/moon2_8-07-2022.png",
+        "static/img/img/moon/moon1_3-08-2022.jpg",
+        "static/img/img/sun/sun1_27-04-2023.jpg",
+        "static/img/img/landscape/landscape1_19-08-2019.jpeg",
+        "static/img/img/landscape/landscape2_22-08-2019.jpeg",
+        "static/img/img/landscape/landscape1_23-08-2020.jpeg",
+        "static/img/img/landscape/landscape1_12-08-2022.jpeg",
+        "static/img/img/landscape/landscape1_16-08-2022.jpeg",
+        "static/img/img/landscape/landscape1_19-08-2022.jpeg",
     ];
 
     const img_description = [
@@ -133,17 +145,24 @@
         "Friday 15 April 2022",
         "Thursday 22 august 2019",
         "Tuesday 25 August 2020",
-        "Friday 01 July 2022",
         "Wednesday 03 August 2022",
         "Tuesday 07 June 2022",
         "Friday 08 July 2022",
         "Friday 13 May 2022",
-        "Wednesday 03 August 2022",
         "Saturday 16 April 2022",
         "Saturday 08 April 2023",
         "Sunday 09 April 2023",
         "Saturday 08 April 2023",
         "Sunday 09 April 2023",
+        "Friday 08 July 2022",
+        "Wednesday 03 August 2022",
+        "Thursday 27 April 2023",
+        "Monday 19 August 2019",
+        "Monday 19 August 2019",
+        "Friday 23 August 2019",
+        "Friday 12 August 2022",
+        "Tuesday 16 August 2022",
+        "Friday 19 August 2022",
     ];
 
     const img_description_color = [
@@ -164,9 +183,16 @@
         "white",
         "white",
         "white",
-        "white",
-        "white",
         "black",
+        "white",
+        "white",
+        "white",
+        "white",
+        "white",
+        "white",
+        "white",
+        "white",
+        "white",
     ];
 
     const img_category = [
@@ -183,13 +209,20 @@
         "moon",
         "moon",
         "moon",
-        "moon",
-        "moon",
         "other",
         "sun",
         "sun",
         "sun",
-        "sun"
+        "sun",
+        "moon",
+        "moon",
+        "sun",
+        "landscape",
+        "landscape",
+        "landscape",
+        "landscape",
+        "landscape",
+        "landscape",
     ];
 
 
@@ -220,7 +253,7 @@
 
                 const portfolioItem = `
       <div class="mix ${colSize} col-md-6 web ${img_category[i]}">
-        <a class="portfolio-item set-bg" style="background-image: url(${img_path[i]});">
+        <a class="portfolio-item set-bg image-popup" href="${img_path[i]}" style="background-image: url(${img_path[i]});">
           <div class="pi-inner">
             <h2${img_description_color[i] ? ` style="color: ${img_description_color[i]}!important;"` : ''}>${img_description[i]}</h2>
           </div>
@@ -231,9 +264,23 @@
                 gallery.insertAdjacentHTML('beforeend', portfolioItem);
             }
         }
+        initMagnificPopup();
     }
 
+    function initMagnificPopup() {
+        $('.portfolios-area').magnificPopup({
+            delegate: 'a',
+            type: 'image',
+            mainClass: 'mfp-with-zoom',
+            gallery: {
+                enabled: false
+            },
+        });
+    }
+
+
     document.addEventListener('DOMContentLoaded', () => displayImages('All'));
+    document.addEventListener('DOMContentLoaded', initMagnificPopup);
 
 
 </script>
